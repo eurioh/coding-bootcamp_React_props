@@ -2,12 +2,26 @@ import React from "react";
 import Card from "./components/Card";
 import contacts from "./contacts.js";
 
+function createCard(contact){
+  return <Card
+    key={contact.id} // uniq component key is not to show
+    name= {contact.name}
+    img={contact.img}
+    alt={contact.alt}
+    tell={contact.tell}
+    email={contact.email}
+  />
+}
+
 function App() {
   return (
     <div>
       <h1>My Contacts</h1>
     
-      <Card 
+      {contacts.map(createCard)}
+      {/* need curly braces so it is interpreted as javascript code */}
+
+      {/* <Card 
         name = {contacts[0].name}
         img = {contacts[0].img}
         alt={contacts[0].alt}
@@ -36,7 +50,7 @@ function App() {
                 alt={contacts[3].alt}
                 tell={contacts[3].tell}
                 email={contacts[3].email}
-            />
+            /> */}
 
     </div>
   );
