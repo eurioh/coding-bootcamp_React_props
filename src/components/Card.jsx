@@ -10,8 +10,6 @@ function Card(props){
                 <Avatar img={props.img}/>
             </div>
             <div className="bottom">
-               {/* <Detail tell={props.tell} email={props.email}/> */}
-                {/* or */}
                <Detail tell={props.tell}/>
                <Detail  email={props.email}/>
             </div>
